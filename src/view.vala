@@ -87,18 +87,18 @@ private class RoundedRectangle : Object
              = new HashTable<int, Clutter.Color?> (direct_hash, direct_equal);
     static construct
     {
-        colors.insert (/* empty */ 0,  Clutter.Color.from_string ("#ffffff"));  // White
-        colors.insert (/*     2 */ 1,  Clutter.Color.from_string ("#fce94f"));  // Butter 1
-        colors.insert (/*     4 */ 2,  Clutter.Color.from_string ("#8ae234"));  // Chameleon 1
-        colors.insert (/*     8 */ 3,  Clutter.Color.from_string ("#fcaf3e"));  // Orange 1
-        colors.insert (/*    16 */ 4,  Clutter.Color.from_string ("#729fcf"));  // Sky blue 1
-        colors.insert (/*    32 */ 5,  Clutter.Color.from_string ("#ad7fa8"));  // Plum 1
-        colors.insert (/*    64 */ 6,  Clutter.Color.from_string ("#c17d11"));  // Chocolate 2
-        colors.insert (/*   128 */ 7,  Clutter.Color.from_string ("#ef2929"));  // Scarlet red 1
-        colors.insert (/*   256 */ 8,  Clutter.Color.from_string ("#c4a000"));  // Butter 3
-        colors.insert (/*   512 */ 9,  Clutter.Color.from_string ("#4e9a06"));  // Chameleon 3
-        colors.insert (/*  1024 */ 10, Clutter.Color.from_string ("#ce5c00"));  // Orange 3
-        colors.insert (/*  2048 */ 11, Clutter.Color.from_string ("#204a87"));  // Sky blue 3
+        colors.insert (/* empty */ 0,  Clutter.Color.from_string ("#1e1e2e"));  // White
+        colors.insert (/*     2 */ 1,  Clutter.Color.from_string ("#f5c2e7"));  // Butter 1
+        colors.insert (/*     4 */ 2,  Clutter.Color.from_string ("#89b4fa"));  // Chameleon 1
+        colors.insert (/*     8 */ 3,  Clutter.Color.from_string ("#f38ba8"));  // Orange 1
+        colors.insert (/*    16 */ 4,  Clutter.Color.from_string ("#a6e3a1"));  // Sky blue 1
+        colors.insert (/*    32 */ 5,  Clutter.Color.from_string ("#f9e2af"));  // Plum 1
+        colors.insert (/*    64 */ 6,  Clutter.Color.from_string ("#fab387"));  // Chocolate 2
+        colors.insert (/*   128 */ 7,  Clutter.Color.from_string ("#f5e0dc"));  // Scarlet red 1
+        colors.insert (/*   256 */ 8,  Clutter.Color.from_string ("#cba6f7"));  // Butter 3
+        colors.insert (/*   512 */ 9,  Clutter.Color.from_string ("#94e2d5"));  // Chameleon 3
+        colors.insert (/*  1024 */ 10, Clutter.Color.from_string ("#f2cdcd"));  // Orange 3
+        colors.insert (/*  2048 */ 11, Clutter.Color.from_string ("#89dceb"));  // Sky blue 3
     }
 
     private Clutter.Color _color;
@@ -144,13 +144,13 @@ private class TileView : RoundedRectangle
     {
         base._draw (ctx, width, height);
 
-        ctx.set_source_rgb (255, 255, 255);
+        ctx.set_source_rgb (205, 214, 244);
 
         Pango.Layout layout = Pango.cairo_create_layout (ctx);
         Pango.FontDescription font_desc = Pango.FontDescription.from_string ("Sans Bold %dpx".printf (height / 4));
         layout.set_font_description (font_desc);
 
-        layout.set_text (Math.pow (2, /* tile value */ color).to_string (), -1);
+        layout.set_text (Math.pow (2, color).to_string (), -1);
 
         Pango.Rectangle logical_rect;
         layout.get_extents (null, out logical_rect);

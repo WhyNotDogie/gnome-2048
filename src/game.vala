@@ -204,7 +204,7 @@ private class Game : Object
     {
         uint8 rows = _grid.rows;
         uint8 cols = _grid.cols;
-        Clutter.Color background_color = Clutter.Color.from_string ("#babdb6");
+        Clutter.Color background_color = Clutter.Color.from_string ("#313244");
         _view.set_background_color (background_color);
 
         _background     = new RoundedRectangle [rows, cols];

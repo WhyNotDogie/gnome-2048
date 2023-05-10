@@ -495,10 +495,10 @@ private class GameWindow : ApplicationWindow
 
     private void about_cb (/* SimpleAction action, Variant? variant */)
     {
-        string [] authors = { "Juan R. García Blanco", "Arnaud Bonatti" };
+        string [] authors = { "Juan R. García Blanco", "Arnaud Bonatti", "Catppuccin colors by WhyNotDogie" };
         show_about_dialog (this,
                            /* Translators: about dialog text; the program name */
-                           "program-name", _("2048"),
+                           "program-name", _("2048 Catppuccin"),
                            "version", VERSION,
 
                            /* Translators: about dialog text; a introduction to the game */
